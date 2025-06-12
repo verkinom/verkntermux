@@ -1,4 +1,16 @@
+#!/usr/bin/env python3.8
 import sys
+
+# Pastikan menggunakan Python 3.8
+if sys.version_info[0] != 3 or sys.version_info[1] != 8:
+    print("\n❌ Error: Bot ini khusus untuk Python versi 3.8")
+    print("🔍 Versi Python Anda:", ".".join(map(str, sys.version_info[:3])))
+    print("\n📥 Install Python 3.8 di Termux dengan perintah:")
+    print("1. pkg update && pkg upgrade")
+    print("2. pkg install python3.8")
+    print("3. ln -sf /data/data/com.termux/files/usr/bin/python3.8 /data/data/com.termux/files/usr/bin/python")
+    sys.exit(1)
+
 import os
 import json
 import time
@@ -7,13 +19,6 @@ from yowsup.layers.network import YowNetworkLayer
 from yowsup.layers.protocol_messages import YowMessagesProtocolLayer
 from yowsup.layers import YowLayerEvent
 from yowsup.stacks import YowStack, YowStackBuilder
-
-if not (3, 8, 0) <= sys.version_info < (3, 9, 0):
-    print("\n❌ Error: Bot ini membutuhkan Python versi 3.8")
-    print("🔍 Versi Python Anda:", ".".join(map(str, sys.version_info[:3])))
-    print("📥 Silakan install Python 3.8 di Termux dengan perintah:")
-    print("   pkg install python3.8")
-    sys.exit(1)
 from yowsup.registration import WARegRequest
 from yowsup.layers.network import YowNetworkLayer
 from yowsup.layers.protocol_messages import YowMessagesProtocolLayer

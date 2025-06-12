@@ -1,0 +1,13 @@
+# Declare files that will always have specific line endings
+*.py linguist-language=Python
+*.py linguist-detectable=true
+*.py linguist-vendored=false
+
+# Set Python version for GitHub
+.python-version linguist-language=Python
+runtime.txt linguist-language=Python
+
+# Documentation
+*.md linguist-documentation=true
+README.md linguist-documentation=true
+PYTHON_VERSION.md linguist-documentation=true

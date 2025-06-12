@@ -1,5 +1,62 @@
 # 🤖 WhatsApp Bot Termux
 
+⚠️ **PERINGATAN PENTING** ⚠️
+```diff
+- JANGAN GUNAKAN PYTHON 3.12!
+- JANGAN GUNAKAN PYTHON 3.11!
+- JANGAN GUNAKAN PYTHON 3.10!
+- JANGAN GUNAKAN PYTHON 3.9!
++ WAJIB GUNAKAN PYTHON 3.8.x
+```
+
+## ⚙️ Kenapa Harus Python 3.8?
+- Library yowsup2 hanya stabil di Python 3.8
+- Protobuf dan dependencies lain lebih stabil di 3.8
+- Banyak error jika pakai versi Python yang lebih baru
+- Python 3.8 lebih ringan di Termux
+
+## 📥 Cara Install yang Benar
+```bash
+# 1. Hapus Python versi lain
+pkg remove python -y
+
+# 2. Install khusus Python 3.8
+pkg install python3.8 -y
+pkg install python3.8-pip -y
+
+# 3. Set Python 3.8 sebagai default
+ln -sf $PREFIX/bin/python3.8 $PREFIX/bin/python
+ln -sf $PREFIX/bin/pip3.8 $PREFIX/bin/pip
+
+# 4. Pastikan versi benar
+python --version  # HARUS tampil -> Python 3.8.x
+pip --version     # HARUS pakai Python 3.8
+```
+
+⚠️ **PENTING: BOT INI KHUSUS UNTUK PYTHON 3.8** ⚠️
+- Tidak bisa pakai Python versi lain
+- Python 3.8 lebih stabil di Termux
+- Semua dependencies sudah ditest di Python 3.8
+
+## 🔧 Cara Install Python 3.8 di Termux
+```bash
+# Update repository
+pkg update && pkg upgrade -y
+
+# Hapus Python lama (jika ada)
+pkg remove python -y
+
+# Install Python 3.8
+pkg install python3.8 -y
+
+# Set Python 3.8 sebagai default
+ln -sf /data/data/com.termux/files/usr/bin/python3.8 /data/data/com.termux/files/usr/bin/python
+ln -sf /data/data/com.termux/files/usr/bin/pip3.8 /data/data/com.termux/files/usr/bin/pip
+
+# Cek versi
+python --version  # Harus tampil Python 3.8.x
+```
+
 Bot WhatsApp sederhana untuk mengirim pesan teks. Berjalan di Termux tanpa root.
 Verifikasi via SMS (tidak perlu scan QR code).
 

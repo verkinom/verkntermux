@@ -1,3 +1,6 @@
+# Python Version: 3.8.x ONLY!
+# DO NOT USE WITH PYTHON 3.12!
+
 yowsup2==2.5.4
 pycrypto==2.6.1
 python-dateutil==2.7.5
