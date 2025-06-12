@@ -1,0 +1,4 @@
+yowsup2==2.5.4
+pycrypto==2.6.1
+python-dateutil==2.7.5
+protobuf==3.6.1
